@@ -19,7 +19,7 @@ This assumes you will run the Valheim server on a Linux server.
     sudo apt install git # For Ubuntu/Debian
     ```
 
-    > [NOTE!]
+    > [!NOTE]
     > For distributions other than Ubuntu/Debian, go to [Git's installation page](https://git-scm.com/downloads/linux) to find out how to install it
 
 2. Docker
@@ -49,7 +49,7 @@ This assumes you will run the Valheim server on a Linux server.
     nano .env
     ```
 
-    > [NOTE!]
+    > [!NOTE]
     > For more configuration options, see the [valheim-server-docker repo](https://github.com/lloesche/valheim-server-docker?tab=readme-ov-file#environment-variables)
 
 3. Create the config and data directories
