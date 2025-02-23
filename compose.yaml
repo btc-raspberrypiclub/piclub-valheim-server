@@ -19,3 +19,4 @@ services:
       SERVER_PASS: "${SERVER_PASS:?}"
       PUID: "${UID:?}"
       PGID: "${GID:?}"
+    restart: "unless-stopped"
