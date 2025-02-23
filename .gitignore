@@ -1,0 +1,9 @@
+# Ignore environment files (excluding the example file)
+*.env
+!example.env
+
+# Valheim server install directory
+data/
+
+# Valheim server configuration directory
+config/

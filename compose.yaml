@@ -1,0 +1,21 @@
+services:
+  valheim-server:
+    image: "ghcr.io/lloesche/valheim-server"
+    user: "${UID:?}:${GID:?}" # You will need to make a group (e.g. "valheim") with gid of 2456 (or, you can edit this line)
+
+    cap_add:
+      - "SYS_NICE"
+    stop_grace_period: "2s"
+    ports:
+      - "2456-2457:2456-2457/udp"
+      - "9001:9001/tcp" # Optional: Port for the Supervisor HTTP server
+    volumes:
+      - "/valheim/config:/config"
+      - "/valheim/data:/opt/valheim"
+    environment:
+      SERVER_NAME: "${SERVER_NAME:?}"
+      WORLD_NAME: "${WORLD_NAME:?}"
+      # This password must 5 or more characters long!
+      SERVER_PASS: "${SERVER_PASS:?}"
+      PUID: "${UID:?}"
+      PGID: "${GID:?}"
