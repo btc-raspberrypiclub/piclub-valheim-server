@@ -1,0 +1,47 @@
+:root {
+    color-scheme: light dark;
+    --background-color: light-dark(#eeeeee, #333333);
+    --content-background-color: light-dark(#cccccc, #555555);
+    --text-color: light-dark(#111111, #eeeeee);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: arial;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+#content {
+    width: 50%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: var(--content-background-color);
+}
+
+dl {
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: max-content auto;
+    background-color: var(--background-color);
+}
+
+dt {
+    padding: 0.25rem 0.5rem;
+    grid-column-start: 1;
+}
+
+dd {
+    padding: 0.25rem 0.5rem;
+    grid-column-start: 2;
+    overflow-wrap: break-word;
+}
+
+h1 {
+   margin-bottom: 1rem;
+}

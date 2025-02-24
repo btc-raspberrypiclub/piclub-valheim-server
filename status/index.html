@@ -8,8 +8,22 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1 id="server-name">Unknown</h1>
-    <p id="status">Unknown</p>
+    <div id="content">
+      <h1 id="server-name">Unknown</h1>
+      <dl id="status-list">
+        <dt class="status-key">Last Update:</dt>
+        <dd class="status-value" id="last-update">Unknown</dd>
+
+        <dt class="status-key">Error:</dt>
+        <dd class="status-value" id="error">Unknown</dd>
+
+        <dt class="status-key">Player Count:</dt>
+        <dd class="status-value" id="player-count">Unknown</dd>
+
+        <dt class="status-key">Port:</dt>
+        <dd class="status-value" id="port">Unknown</dd>
+      </dl>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

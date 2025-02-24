@@ -1,3 +1,4 @@
+// Get the status json, parse it, and set coresponding values on the page
 async function updateStatus() {
     const response = await fetch("/status.json");
     if (!response.ok) {
@@ -6,11 +7,11 @@ async function updateStatus() {
     
     const json = await response.json();
 
-    document.getElementById("server-name").innerHTML = json.server_name;
-
-    const statusText = `Last update: ${new Date(json.last_status_update)}, Player count: ${json.player_count}`;
-
-    document.getElementById("status").innerHTML = statusText;
+    document.getElementById("server-name").innerText = json.server_name;
+    document.getElementById("last-update").innerText = json.last_status_update;
+    document.getElementById("error").innerText = json.error || "None";
+    document.getElementById("player-count").innerText = json.player_count;
+    document.getElementById("port").innerText = json.port;
 }
 
 // Get the initial status

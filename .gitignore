@@ -8,4 +8,5 @@ data/
 # Valheim server configuration directory
 config/
 
+# Status file is auto-generated
 status/status.json
