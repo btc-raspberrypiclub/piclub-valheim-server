@@ -12,8 +12,11 @@ services:
       - "9001:9001/tcp"
       # Comment out the following line if you don't want to expose the Status Web Server HTTP port
       - "80:80/tcp"
+    environment:
+      STATUS_HTTP_HTDOCS: "/status"
     volumes:
-      - "/valheim/config:/config"
-      - "/valheim/data:/opt/valheim"
+      - "./config:/config"
+      - "./data:/opt/valheim"
+      - "./status:/status"
     restart: "unless-stopped"
     env_file: ".env"

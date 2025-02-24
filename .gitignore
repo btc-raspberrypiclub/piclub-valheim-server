@@ -7,3 +7,5 @@ data/
 
 # Valheim server configuration directory
 config/
+
+status/status.json
