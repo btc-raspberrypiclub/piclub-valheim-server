@@ -65,7 +65,7 @@ This assumes you will run the Valheim server on a Linux server.
 4. Start the server
 
     ```sh
-    docker compose up
+    docker compose up -d
     ```
 
     The initial startup will take a while after running this command (the world has to be generated).
